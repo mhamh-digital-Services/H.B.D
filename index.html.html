@@ -159,7 +159,7 @@ const initialGift = JSON.parse(giftData.textContent);
 
 function personalize(name, greeting) {
   document.querySelector('#headline').textContent = name ? 'هذي لك يا ' + name + '!' : 'هذي لك يا حلوة!';
-  document.querySelector('#letterTitle').textContent = 'كل عام وأنت بخير يا ' + (name || 'حلوة') + '!';
+  document.querySelector('#letterTitle').textContent = 'كل عام وأنتي بخير يا ' + (name || 'حلوة') + '!';
   document.querySelector('#letterText').textContent = greeting || defaultMessage;
 }
 
