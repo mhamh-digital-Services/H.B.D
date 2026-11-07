@@ -104,7 +104,7 @@ input,textarea{font:inherit;padding:9px 11px;border:1px solid #bf648a80;border-r
 <main>
 <section class="story" aria-label="تجربة فتح البوكس">
 <div class="frame">
-<div class="copy"><span class="mono" dir="ltr">A LITTLE BIRTHDAY MAGIC</span><h1 id="headline">هذي لكِ يا حلوة!</h1><p>فيه مفاجأة صغيرة تنتظرك 🎀</p></div>
+<div class="copy"><span class="mono" dir="ltr">A LITTLE BIRTHDAY MAGIC</span><h1 id="headline">هذي لك يا حلوة!</h1><p>فيه مفاجأة صغيرة تنتظرك 🎀</p></div>
 <div class="scene" aria-label="صندوق هدايا ثلاثي الأبعاد، اسحبي أفقيًا لتدويره">
 <div class="shadow"></div>
 <div class="rig" aria-hidden="true">
@@ -137,9 +137,9 @@ input,textarea{font:inherit;padding:9px 11px;border:1px solid #bf648a80;border-r
 </section>
 </main>
 <footer>فَكّة · نسخة عيد الميلاد من «مهمّة»</footer>
-<dialog id="letter"><div class="seal">♡</div><div class="mono" dir="ltr">HAPPY BIRTHDAY</div><h2 id="letterTitle">كل عام وأنتِ بخير يا حلوة!</h2><p id="letterText">كل عام وأنتي طيبة ياروحي  وكل عام وأنا محظوظة فيكِ أتمنى سنتك الجديدة تكون مليانة أشياء تحبينها ولحظات تفرّحك قد ما تفرّحيني أحبك يا أحلى صديقة! 💗</p><button type="button" class="action" id="again">نعيد المفاجأة؟ ↺</button></dialog>
+<dialog id="letter"><div class="seal">♡</div><div class="mono" dir="ltr">HAPPY BIRTHDAY</div><h2 id="letterTitle">ي كل عام وأنتي بخير يا حلوة!</h2><p id="letterText">ي كل عام وأنتي طيبة ياروحي  وكل عام وأنا محظوظة فيك أتمنى سنتك الجديدة تكون مليانة أشياء تحبينها ولحظات تفرّحك قد ما تفرّحيني أحبك يا أحلى صديقة! 💗</p><button type="button" class="action" id="again">نعيد المفاجأة؟ ↺</button></dialog>
 <dialog id="editor"><form id="giftForm"><div class="mono" dir="ltr">MAKE IT HERS</div><h2>هدية باسمها 💌</h2><label>اسم صديقتك<input id="recipient" maxlength="30" placeholder="الاسم أو الدلع"></label><label>رسالتك<textarea id="message" maxlength="360" rows="4"></textarea></label><button class="action" type="submit">طبّقي التخصيص</button><button class="record" type="button" id="cancel">إغلاق</button><button class="customize" type="button" id="download">نزّلي نسخة الهدية لإرسالها ↓</button></form></dialog>
-<script type="application/json" id="gift-data">{"name":"رورو القلب","greeting":"كل عام وأنتي طيبة ياروحي وكل عام وأنا محظوظة فيكِ أتمنى سنتك الجديدة تكون مليانة أشياء تحبينها ولحظات تفرّحك قد ما تفرّحيني أحبك يا أحلى صديقة! 💗","delivered":true}</script>
+<script type="application/json" id="gift-data">{"name":"رورو القلب","greeting":"كل عام وأنتي طيبة ياروحي وكل عام وأنا محظوظة فيك أتمنى سنتك الجديدة تكون مليانة أشياء تحبينها ولحظات تفرّحك قد ما تفرّحيني أحبك يا أحلى صديقة! 💗","delivered":true}</script>
 <script>
 const story = document.querySelector('.story');
 const frame = document.querySelector('.frame');
@@ -154,12 +154,12 @@ const editor = document.querySelector('#editor');
 const recipient = document.querySelector('#recipient');
 const message = document.querySelector('#message');
 const giftData = document.querySelector('#gift-data');
-const defaultMessage = 'كل عام وأنتِ تضحكين من قلبك، وكل عام وأنا محظوظة فيكِ. أتمنى سنتك الجديدة تكون مليانة أشياء تحبينها ولحظات تفرّحك قد ما تفرّحيني. أحبك يا أحلى صديقة! 💗';
+const defaultMessage = 'ي كل عام وأنتِ تضحكين من قلبك، وكل عام وأنا محظوظة فيك. أتمنى سنتك الجديدة تكون مليانة أشياء تحبينها ولحظات تفرّحك قد ما تفرّحيني. أحبك يا أحلى صديقة! 💗';
 const initialGift = JSON.parse(giftData.textContent);
 
 function personalize(name, greeting) {
-  document.querySelector('#headline').textContent = name ? 'هذي لك يا ' + name + '!' : 'هذي لكِ يا حلوة!';
-  document.querySelector('#letterTitle').textContent = 'كل عام وأنتِ بخير يا ' + (name || 'حلوة') + '!';
+  document.querySelector('#headline').textContent = name ? 'هذي لك يا ' + name + '!' : 'هذي لك يا حلوة!';
+  document.querySelector('#letterTitle').textContent = 'كل عام وأنتي بخير يا ' + (name || 'حلوة') + '!';
   document.querySelector('#letterText').textContent = greeting || defaultMessage;
 }
 
